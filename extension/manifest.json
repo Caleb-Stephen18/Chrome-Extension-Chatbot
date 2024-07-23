@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Auralis Chatbot",
+  "version": "1.0",
+  "description": "A chatbot that uses LangChain for RAG",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "http://localhost:5000/"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+
+  "background": {
+    "service_worker": "background.js"
+  },
+  
+  "content_scripts": [
+  {
+    "matches": ["<all_urls>"],
+    "js": ["content.js"],
+    "run_at": "document_idle"
+  }
+]
+}
