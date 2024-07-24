@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         renderChatHistory();
         
         if (chatHistory.length === 0) {
-          addMessage('Auralis', 'I am Auralis, how can I help you today?', 'ai');
+          addMessage('Auralis', 'I am Auralis, How can I assist you?', 'ai');
           // await delay(1000);
           await displayInitialQuestions();
         }
